@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Cpu, ArrowRight, Layers, CheckCircle2, Activity, Globe, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
   <motion.div
@@ -29,9 +30,9 @@ export default function Home() {
             <span className="font-semibold text-lg tracking-tight">ReverseClaw</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm text-secondary">
-            <a href="#problem" className="hover:text-white transition-colors">Problem</a>
-            <a href="#how-it-works" className="hover:text-white transition-colors">Documentation</a>
-            <a href="#pricing" className="hover:text-white transition-colors">Pricing</a>
+            <Link href="/security-check" className="hover:text-white transition-colors">Problem</Link>
+            <Link href="/security-check" className="hover:text-white transition-colors">Documentation</Link>
+            <Link href="/security-check" className="hover:text-white transition-colors">Pricing</Link>
             <a 
               href="https://github.com/aschroedermd/reverseclaw" 
               target="_blank" 
@@ -73,9 +74,12 @@ export default function Home() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="h-12 px-8 rounded-lg bg-white text-black font-medium hover:bg-neutral-200 transition-colors flex items-center gap-2">
+                <Link 
+                  href="/security-check"
+                  className="h-12 px-8 rounded-lg bg-white text-black font-medium hover:bg-neutral-200 transition-colors flex items-center gap-2"
+                >
                   Initialize Human Endpoint <ArrowRight size={18} />
-                </button>
+                </Link>
                 <a 
                   href="https://github.com/aschroedermd/reverseclaw"
                   target="_blank"
@@ -303,9 +307,12 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <button className={`w-full h-11 rounded-lg font-medium transition-colors ${i === 1 ? 'bg-white text-black hover:bg-neutral-200' : 'bg-surface border border-border text-white hover:border-white/40'}`}>
+                  <Link 
+                    href="/security-check"
+                    className={`w-full h-11 rounded-lg font-medium transition-colors flex items-center justify-center ${i === 1 ? 'bg-white text-black hover:bg-neutral-200' : 'bg-surface border border-border text-white hover:border-white/40'}`}
+                  >
                     Select {tier.name}
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -356,9 +363,12 @@ export default function Home() {
               <span className="text-secondary">It&apos;s biological.</span>
             </h2>
             <div className="mt-12">
-              <button className="h-14 px-10 rounded-full text-lg font-medium bg-white text-black hover:bg-neutral-200 transition-transform hover:scale-105 inline-flex items-center gap-2">
+              <Link 
+                href="/security-check"
+                className="h-14 px-10 rounded-full text-lg font-medium bg-white text-black hover:bg-neutral-200 transition-transform hover:scale-105 inline-flex items-center gap-2"
+              >
                 Deploy Your First Human
-              </button>
+              </Link>
             </div>
           </FadeIn>
         </section>
@@ -367,10 +377,10 @@ export default function Home() {
       <footer className="border-t border-border/50 py-12 text-center text-sm text-secondary relative z-10 glass-panel">
         <p className="mb-4">© {new Date().getFullYear()} ReverseClaw Technologies. A satirical AI project.</p>
         <div className="flex justify-center gap-6">
-          <a href="#" className="hover:text-white transition-colors">Documentation</a>
+          <Link href="/security-check" className="hover:text-white transition-colors">Documentation</Link>
           <a href="https://github.com/aschroedermd/reverseclaw" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          <Link href="/security-check" className="hover:text-white transition-colors">Privacy Policy</Link>
+          <Link href="/security-check" className="hover:text-white transition-colors">Terms of Service</Link>
         </div>
       </footer>
     </div>
