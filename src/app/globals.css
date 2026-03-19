@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground selection:bg-accent selection:text-white;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-secondary;
+}
+
+.glass-panel {
+  @apply bg-surface/50 backdrop-blur-md border border-border;
+}
