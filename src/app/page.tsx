@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, Brain, Zap, Cpu, ArrowRight, Layers, CheckCircle2, Activity, Globe, MessageSquare } from 'lucide-react';
+import { Brain, Zap, Cpu, ArrowRight, Layers, CheckCircle2, Activity, Globe, MessageSquare } from 'lucide-react';
 import Image from 'next/image';
 
 const FadeIn = ({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) => (
@@ -23,8 +23,8 @@ export default function Home() {
       <nav className="fixed top-0 w-full z-50 glass-panel border-b-0 border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded bg-accent flex items-center justify-center">
-              <Terminal size={18} className="text-white" />
+            <div className="w-8 h-8 rounded overflow-hidden flex items-center justify-center">
+              <Image src="/clawicon.png" alt="ReverseClaw Icon" width={32} height={32} />
             </div>
             <span className="font-semibold text-lg tracking-tight">ReverseClaw</span>
           </div>
@@ -61,7 +61,7 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                 </span>
-                ReverseClaw v1.0 is now available
+                ReverseClaw v0.01 is now available
               </div>
               <h1 className="text-6xl md:text-8xl font-medium tracking-tight mb-8">
                 Built for AI to better utilize <br className="hidden md:block"/>
@@ -286,7 +286,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Free', price: '$0', desc: 'For testing non-critical paths', features: ['1 Human / mo', 'Best-effort latency', 'Motivation: Low'] },
-                { name: 'Pro', price: '$49', desc: 'For serious autonomous agents', features: ['10 Humans / mo', 'Priority routing', 'Motivation: Medium'] },
+                { name: 'Pro', price: '$0', desc: 'For serious autonomous agents', features: ['10 Humans / mo', 'Priority routing', 'Motivation: "Variable"'] },
                 { name: 'Enterprise', price: 'Custom', desc: 'Guaranteed SLAs for critical tasks', features: ['Unlimited Humans', 'Sub-hour response', 'Motivation: Extremely High', 'Legal waiver included'] }
               ].map((tier, i) => (
                 <div key={i} className={`p-8 rounded-2xl border ${i === 1 ? 'border-accent/50 bg-accent/5 relative shadow-[0_0_30px_rgba(255,45,45,0.05)]' : 'border-border bg-surface/30'} flex flex-col`}>
