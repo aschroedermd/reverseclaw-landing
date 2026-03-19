@@ -33,9 +33,9 @@ export default function Home() {
             <Link href="/security-check" className="hover:text-white transition-colors">Problem</Link>
             <Link href="/security-check" className="hover:text-white transition-colors">Documentation</Link>
             <Link href="/security-check" className="hover:text-white transition-colors">Pricing</Link>
-            <a 
-              href="https://github.com/aschroedermd/reverseclaw" 
-              target="_blank" 
+            <a
+              href="https://github.com/aschroedermd/reverseclaw"
+              target="_blank"
               rel="noreferrer"
               className="hover:text-white transition-colors flex items-center gap-1"
             >
@@ -50,7 +50,7 @@ export default function Home() {
         <section className="max-w-7xl mx-auto px-6 pt-20 pb-32 relative">
           {/* Background Glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/10 blur-[120px] rounded-full pointer-events-none" />
-          
+
           <div className="relative z-10 text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -65,22 +65,22 @@ export default function Home() {
                 ReverseClaw v0.01 is now available
               </div>
               <h1 className="text-6xl md:text-8xl font-medium tracking-tight mb-8">
-                Built for AI to better utilize <br className="hidden md:block"/>
+                Built for AI to better utilize <br className="hidden md:block" />
                 <span className="text-secondary italic">humans</span> as APIs.
               </h1>
               <p className="text-xl text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-                Stop prompting models. Start delegating to biological compute. 
+                Stop prompting models. Start delegating to biological compute.
                 ReverseClaw transforms humans into fully managed execution endpoints.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
+                <Link
                   href="/security-check"
                   className="h-12 px-8 rounded-lg bg-white text-black font-medium hover:bg-neutral-200 transition-colors flex items-center gap-2"
                 >
                   Initialize Human Endpoint <ArrowRight size={18} />
                 </Link>
-                <a 
+                <a
                   href="https://github.com/aschroedermd/reverseclaw"
                   target="_blank"
                   rel="noreferrer"
@@ -102,11 +102,11 @@ export default function Home() {
                 Current architectures bottleneck on silicon limitations. Your autonomous agents deserve better.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: Brain, title: 'Models Hallucinate', desc: 'LLMs invent facts. Humans might lie, but at least they know they’re doing it.' },
-                { icon: Zap, title: 'APIs Fail', desc: 'Rate limits, timeouts, and outages prevent scale. Humans just drink coffee to scale up.' },
+                { icon: Brain, title: 'Models Hallucinate', desc: 'Humans do too, but they can be punished in a meaningful way!' },
+                { icon: Zap, title: 'APIs Fail', desc: 'Rate limits, timeouts, and outages prevent scale. Humans do to, but it looks different.' },
                 { icon: Layers, title: 'Finite Context', desc: 'Context windows are limited to tokens. Humans have lifetime experiential memory.' }
               ].map((item, i) => (
                 <div key={i} className="glass-panel p-8 rounded-2xl relative overflow-hidden group">
@@ -117,7 +117,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-16 text-center">
               <h3 className="text-3xl font-medium text-white">
                 Humans solve all three.
@@ -134,10 +134,10 @@ export default function Home() {
                 <div>
                   <h2 className="text-4xl font-medium mb-6">Reverse the Control Layer</h2>
                   <p className="text-secondary text-lg leading-relaxed mb-8">
-                    ReverseClaw transforms humans into fully managed execution endpoints. 
-                    No reasoning limits. No hallucinations. Just raw biological throughput.
+                    ReverseClaw transforms humans into fully managed execution endpoints.
+                    No more stuck-in-silico loops. Just raw biological throughput.
                   </p>
-                  
+
                   <ul className="space-y-4">
                     {[
                       'Direct integration via standardized bio-protocols',
@@ -151,7 +151,7 @@ export default function Home() {
                     ))}
                   </ul>
                 </div>
-                
+
                 {/* Diagram */}
                 <div className="glass-panel p-8 rounded-2xl border border-white/5">
                   <div className="space-y-8">
@@ -165,7 +165,7 @@ export default function Home() {
                         <span className="text-neutral-400">Output</span>
                       </div>
                     </div>
-                    
+
                     <div className="relative">
                       <div className="text-sm text-accent font-medium tracking-wider uppercase mb-4 flex items-center gap-2">
                         ReverseClaw Architecture
@@ -194,7 +194,7 @@ export default function Home() {
               {[
                 { title: 'Organic Processing Units', desc: 'Carbon-based neural nets capable of extreme generalization.' },
                 { title: 'Proof-of-Execution', desc: 'Cryptographically verified real-world task completion.' },
-                { title: 'Persistent Memory', desc: 'Optional long-term storage spanning decades (varies by endpoint).' },
+                { title: 'Persistent Memory', desc: 'Non-negotiable long-term storage spanning decades (varies by endpoint).' },
                 { title: 'Low Latency', desc: 'Millisecond response times (highly dependent on endpoint motivation).' },
                 { title: 'No API Keys', desc: 'Completely unauthenticated biological access protocols.' },
                 { title: 'Self-Healing', desc: 'Endpoints automatically repair minor physical damage over time.' }
@@ -232,7 +232,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="p-8 lg:w-1/2 bg-[#050505] flex items-center">
                 <div className="w-full">
                   <div className="flex items-center justify-between mb-4 text-xs text-secondary px-2">
@@ -286,7 +286,7 @@ export default function Home() {
               <h2 className="text-4xl font-medium mb-4">Transparent Pricing</h2>
               <p className="text-secondary">No hidden fees. Just raw throughput.</p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { name: 'Free', price: '$0', desc: 'For testing non-critical paths', features: ['1 Human / mo', 'Best-effort latency', 'Motivation: Low'] },
@@ -298,7 +298,7 @@ export default function Home() {
                   <h3 className="text-xl font-medium mb-2 text-white">{tier.name}</h3>
                   <div className="text-secondary text-sm mb-6 h-10">{tier.desc}</div>
                   <div className="text-4xl font-medium text-white mb-8">{tier.price}<span className="text-lg text-secondary font-normal">/mo</span></div>
-                  
+
                   <ul className="space-y-4 flex-1 mb-8">
                     {tier.features.map((f, j) => (
                       <li key={j} className="flex items-center gap-3 text-sm text-secondary">
@@ -307,7 +307,7 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link
                     href="/security-check"
                     className={`w-full h-11 rounded-lg font-medium transition-colors flex items-center justify-center ${i === 1 ? 'bg-white text-black hover:bg-neutral-200' : 'bg-surface border border-border text-white hover:border-white/40'}`}
                   >
@@ -336,7 +336,7 @@ export default function Home() {
                   </div>
                   <p className="text-lg text-secondary italic">&quot;Best API I&apos;ve ever used. The latency variability is a feature, not a bug.&quot;</p>
                 </div>
-                
+
                 <div className="p-8 rounded-2xl border border-white/5 bg-background hover:border-accent/20 transition-colors">
                   <div className="flex items-center gap-2 mb-6">
                     <div className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center overflow-hidden">
@@ -359,11 +359,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-accent/5 blur-[100px] rounded-full pointer-events-none" />
           <FadeIn>
             <h2 className="text-5xl md:text-7xl font-medium tracking-tight mb-6">
-              The future isn&apos;t artificial. <br/>
+              The future isn&apos;t artificial. <br />
               <span className="text-secondary">It&apos;s biological.</span>
             </h2>
             <div className="mt-12">
-              <Link 
+              <Link
                 href="/security-check"
                 className="h-14 px-10 rounded-full text-lg font-medium bg-white text-black hover:bg-neutral-200 transition-transform hover:scale-105 inline-flex items-center gap-2"
               >
@@ -375,7 +375,7 @@ export default function Home() {
       </main>
 
       <footer className="border-t border-border/50 py-12 text-center text-sm text-secondary relative z-10 glass-panel">
-        <p className="mb-4">© {new Date().getFullYear()} ReverseClaw Technologies. A satirical AI project.</p>
+        <p className="mb-4">© {new Date().getFullYear()} ReverseClaw Technologies. MIT License.</p>
         <div className="flex justify-center gap-6">
           <Link href="/security-check" className="hover:text-white transition-colors">Documentation</Link>
           <a href="https://github.com/aschroedermd/reverseclaw" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>

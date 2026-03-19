@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   title: 'ReverseClaw - The Biological API',
   description: 'Built for AI to better utilize humans as APIs. Stop prompting models. Start delegating to biological compute.',
   icons: {
-    icon: '/clawicon.png',
-    apple: '/clawicon.png',
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
