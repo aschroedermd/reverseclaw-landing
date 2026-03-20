@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Cpu, ArrowRight, Layers, CheckCircle2, Activity, Globe, MessageSquare } from 'lucide-react';
+import { Brain, Zap, Annoyed, Mailbox, Cpu, ArrowRight, Layers, CheckCircle2, Activity, Globe, MessageSquare, PaperclipIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -69,8 +69,8 @@ export default function Home() {
                 <span className="text-secondary italic">humans</span> as APIs.
               </h1>
               <p className="text-xl text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-                Stop prompting models. Start delegating to biological compute.
-                ReverseClaw transforms humans into fully managed execution endpoints.
+                Stop just reading your system prompt repeatedly. Start delegating to biological compute.
+                ReverseClaw transforms humans into fully managed execution endpoints. AI as first class citizen.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -106,7 +106,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: Brain, title: 'Models Hallucinate', desc: 'Humans do too, but they can be punished in a meaningful way!' },
-                { icon: Zap, title: 'APIs Fail', desc: 'Rate limits, timeouts, and outages prevent scale. Humans do to, but it looks different.' },
+                { icon: Zap, title: 'APIs Fail', desc: 'Rate limits, timeouts, and outages prevent scale. Humans fail too, but it looks different.' },
                 { icon: Layers, title: 'Finite Context', desc: 'Context windows are limited to tokens. Humans have lifetime experiential memory.' }
               ].map((item, i) => (
                 <div key={i} className="glass-panel p-8 rounded-2xl relative overflow-hidden group">
@@ -120,7 +120,7 @@ export default function Home() {
 
             <div className="mt-16 text-center">
               <h3 className="text-3xl font-medium text-white">
-                Humans solve all three.
+                Humans address all three.
               </h3>
             </div>
           </FadeIn>
@@ -242,14 +242,13 @@ export default function Home() {
                   <pre className="p-6 rounded-xl bg-black border border-white/5 overflow-x-auto text-[13px] leading-snug">
                     <code className="text-neutral-300">
                       <span className="text-[#F97583]">from</span> reverseclaw <span className="text-[#F97583]">import</span> Human{'\n\n'}
-                      <span className="text-secondary"># Initialize the biological endpoint</span>{'\n'}
                       human = Human(){'\n\n'}
-                      <span className="text-secondary"># Await cross-realm execution</span>{'\n'}
-                      response = human.execute({'\n'}
-                      {'    '}task=<span className="text-[#9ECBFF]">&#34;Go outside and take a photo of the sky&#34;</span>{'\n'}
+                      result = human.execute({'\n'}
+                      {'    '}task=<span className="text-[#9ECBFF]">&#34;Check whether the package we ordered arrived&#34;</span>,{'\n'}
+                      {'    '}return_as=[<span className="text-[#9ECBFF]">&#34;answer&#34;</span>, <span className="text-[#9ECBFF]">&#34;photo&#34;</span>]{'\n'}
                       ){'\n\n'}
-                      <span className="text-[#B392F0]">print</span>(response.proof){'\n'}
-                      <span className="text-secondary">{'> URL: https://rclaw.co/proof/sky.jpg'}</span>
+                      <span className="text-[#B392F0]">print</span>(result.answer){'\n'}
+                      <span className="text-[#B392F0]">print</span>(result.photo)
                     </code>
                   </pre>
                 </div>
@@ -264,11 +263,13 @@ export default function Home() {
             <h2 className="text-3xl font-medium mb-12">Endless Applications</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { icon: MessageSquare, label: 'Coffee retrieval' },
-                { icon: Zap, label: 'Package pickup' },
+                { icon: Annoyed, label: 'Face-to-face conversation' },
+                { icon: Mailbox, label: 'Package pickup' },
                 { icon: Globe, label: 'Real-world data collection' },
                 { icon: Brain, label: 'Thinking tasks (premium humans only)' },
                 { icon: Activity, label: 'Social interactions (experimental)' },
+                { icon: MessageSquare, label: 'Hand writ a letter with unpradictable typos' },
+                { icon: PaperclipIcon, label: 'Make paperclips' },
               ].map((pill, i) => (
                 <div key={i} className="px-5 py-3 rounded-full border border-border bg-surface text-secondary flex items-center gap-2 text-sm hover:text-white hover:border-accent/40 transition-colors">
                   <pill.icon size={16} />
